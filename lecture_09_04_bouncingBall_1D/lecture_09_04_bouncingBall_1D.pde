@@ -1,10 +1,10 @@
 int x, y;
 int diam; // ball's diameter
-int xdir;
+int xdir; // ball's direction
 
 void setup(){
-  size(600, 400);
-  x = 300;
+  size(800, 600);
+  x = 100;
   y = 100;
   diam = 30;
   xdir = +5;
@@ -15,7 +15,7 @@ void draw(){
   ellipse(x, y, diam, diam);
   x = x + xdir; // ball movement
   
-  if (x > 600){
+  if (x > 800){
   //if (x + diam/2 > 600){
     xdir = xdir * -1;
   }

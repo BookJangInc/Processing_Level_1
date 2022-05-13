@@ -1,11 +1,11 @@
 int x, y;
-int diam; // ball's diameter
-int xdir, ydir;
-color ballColor; 
+int diam; 
+int xdir, ydir; // ball's y direction
+color ballColor;  // ball's color
 
 void setup(){
-  size(600, 400);
-  x = 300;
+  size(800, 600);
+  x = 100;
   y = 100;
   diam = 30;
   xdir = +5;

@@ -1,8 +1,7 @@
-int x;
-
+int x; // ball's x position
 
 void setup(){
-  size(600, 400);
+  size(800, 600);
   x = 0;
 }
 
