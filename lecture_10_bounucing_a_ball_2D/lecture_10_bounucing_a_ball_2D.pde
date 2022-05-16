@@ -21,19 +21,23 @@ void draw(){
   x = x + xdir; // ball movement
   y = y + ydir;
   
-  if (x + diam/2 > width){ // system variable
-    xdir = xdir * -1;
-    ballColor = #ffff00;
-  }
   if (x - diam/2 < 0){
     xdir = xdir * -1;
     ballColor = #ff0000;
   }
-  if (y + diam/2 > height){
-    ydir = ydir * -1;
+  
+  if (x + diam/2 > width){
+    xdir = xdir * -1;
+    ballColor = #ffff00;
   }
+  
   if (y - diam/2 < 0){
     ydir = ydir * -1;
   }
+  
+  if (y + diam/2 > height){
+    ydir = ydir * -1;
+  }
+
   
 }
