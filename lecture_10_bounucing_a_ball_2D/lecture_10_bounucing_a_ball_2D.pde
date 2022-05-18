@@ -8,8 +8,8 @@ void setup(){
   x = 100;
   y = 100;
   diam = 30;
-  xdir = +5;
-  ydir = +3;
+  xdir = +6;
+  ydir = +6;
   ballColor = #000000; //hexadecimal(0..F)
 }
 
