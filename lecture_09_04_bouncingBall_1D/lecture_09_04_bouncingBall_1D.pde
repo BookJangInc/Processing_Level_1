@@ -1,4 +1,4 @@
-int x, y;
+int x, y; // ball's position
 int diam; // ball's diameter
 int xdir; // ball's direction
 
