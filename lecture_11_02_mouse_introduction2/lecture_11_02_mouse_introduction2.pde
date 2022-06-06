@@ -2,7 +2,7 @@
 // mousePressed variable
 
 void setup() {
-  size(600, 400);
+  size(600, 600);
   noStroke();
 }
 
@@ -15,5 +15,5 @@ void draw() {
     fill(255);
   }
 
-  ellipse(mouseX, mouseY, 80, 80);
+  ellipse(mouseX, mouseY, 100, 100);
 }
