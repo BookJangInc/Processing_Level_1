@@ -11,9 +11,7 @@ color padColor;
 
 //brick
 int brick1X, brick1Y, brick1Diam;
-//[upgrade #3: life of bricks]
-//boolean brick1Alive;
-int brick1Alive;
+boolean brick1Alive;
 
 void setup(){
   size(800, 600);
@@ -33,9 +31,7 @@ void setup(){
   brick1X = width/2;
   brick1Y = 15;
   brick1Diam = 30;
-  //[upgrade #3: life of bricks]
-  //brick1Alive = true;
-  brick1Alive = 3;
+  brick1Alive = true;
 }
 
 void draw(){
@@ -53,13 +49,8 @@ void draw(){
     rect(padX, padY, padWidth, 20, 15);
     
     // drawing a brick
-    //[upgrade #3: life of bricks]
-    //if (brick1Alive ){
-    //  fill(255, 0, 0);
-    //  ellipse(brick1X, brick1Y, brick1Diam, brick1Diam);
-    //}
-    if (brick1Alive > 0){
-      fill(80*brick1Alive, 0, 0);
+    if (brick1Alive ){
+      fill(255, 0, 0);
       ellipse(brick1X, brick1Y, brick1Diam, brick1Diam);
     }
     
@@ -86,7 +77,7 @@ void draw(){
            ydir *= -1;
            fill(#FF0000);
            rect(padX+2, padY+2, padWidth-4, 16, 15);
-           // [Upgrade #1] ball speed up
+           // [Upgrade #1: ball speed up]
            if (xdir > 0) 
              xdir++;
            else
@@ -96,20 +87,14 @@ void draw(){
              ydir++;
            else
              ydir--;
-           // [Upgrade #2] change pad size
+           // [Upgrade #2: change pad size]
            padWidth -= 10;
     }
     
     // checking collision with bricks
-    //[upgrade #3: life of bricks]
-    //if ( brick1Alive && 
-    //     dist(x, y, brick1X, brick1Y) < diam/2 + brick1Diam/2 + 5) {
-    //  brick1Alive = false;
-    //  ydir *= -1;
-    //}
-    if ( brick1Alive > 0 && 
+    if ( brick1Alive && 
          dist(x, y, brick1X, brick1Y) < diam/2 + brick1Diam/2 + 5) {
-      brick1Alive--;
+      brick1Alive = false;
       ydir *= -1;
     }
 }

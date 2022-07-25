@@ -1,12 +1,8 @@
-// mouse interaction
-// mouseX, mouseY variables
-
 void setup() {
-  size(600, 600);
-  noStroke();
+  size(800, 600);
 }
 
 void draw() {
-  // background(200); // comparisons with/without background() function
+  background(200);
   ellipse(mouseX, mouseY, 100, 100);
 }

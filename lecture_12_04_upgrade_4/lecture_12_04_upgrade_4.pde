@@ -40,14 +40,6 @@ void setup(){
 
 void draw(){
     background(200);
-    
-    //[upgrade #4: checking end of game and display messages]
-    if (brick1Alive == 0){
-      textSize(30);
-      fill(255, 0, 0);
-      text("Game Ends", 10, 30);
-      noLoop();
-    }
    
     // drawing a ball
     fill(ballColor);
@@ -111,12 +103,12 @@ void draw(){
     // checking collision with bricks
     //[upgrade #3: life of bricks]
     //if ( brick1Alive && 
-    //     dist(x, y, brick1X, brick1Y) < diam/2 + brick1Diam/2 ) {
+    //     dist(x, y, brick1X, brick1Y) < diam/2 + brick1Diam/2 + 5) {
     //  brick1Alive = false;
     //  ydir *= -1;
     //}
     if ( brick1Alive > 0 && 
-         dist(x, y, brick1X, brick1Y) <= diam/2 + brick1Diam/2 + 5) {
+         dist(x, y, brick1X, brick1Y) < diam/2 + brick1Diam/2 + 5) {
       brick1Alive--;
       ydir *= -1;
     }
